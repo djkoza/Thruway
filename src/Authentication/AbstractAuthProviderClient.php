@@ -106,7 +106,9 @@ abstract class AbstractAuthProviderClient extends Client
             return ['ERROR'];
         }
 
-        return $this->processAuthenticate($signature, $extra);
+        $result = $this->processAuthenticate($signature, $extra);
+
+        return $result;
     }
 
     /**
